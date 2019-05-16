@@ -1,0 +1,118 @@
+<body id="page-top">
+    <app-header></app-header>
+     
+    
+      <div id="wrapper">
+    
+        <!-- Sidebar -->
+        <app-side-bar></app-side-bar>
+    
+        
+        <!-- /.content-wrapper -->
+        <div id="content-wrapper">
+   
+          <div class="container-fluid">
+        
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item active">Overview</li>
+            </ol>
+        
+            <!-- Icon Cards-->
+            
+        
+            <!-- Area Chart Example-->
+            
+        
+            <!-- DataTables Example -->
+            <div class="card mb-3">
+              <div class="card-header">
+                <i class="fas fa-table"></i>
+               l'utilisateur : Rebhi Omar farouk </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>Parking</th>
+                        <th>Date Debut</th>
+                        <th>Date Fin</th>
+                        <th>Prix</th>
+                        <th>Rayon</th>
+                        <th>Numero</th>
+                        <th>Actions</th>
+                        
+                      </tr>
+                    </thead>
+                     
+        <tr *ngFor="let item of testkey | async">
+          
+          <td>{{item.parking}}</td>
+          <td>{{item.dateDebut}}</td>
+          <td>{{item.dateFin}}</td>
+          <td>{{item.prix}}</td>
+          <td><select class="form-control form-control-sm" [(ngModel)]="Rayon"  >
+             
+              <option  selected value="01">01</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+            </select></td>
+            <td><select class="form-control form-control-sm" [(ngModel)]="Numero">
+                <option>1</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+              </select></td>
+              <div *ngIf ="item.valider else autre">
+              <td><a  class="btn btn-success " role="button" (click)="nonValider(item.key,'0','0',false)" >Validé</a></td>
+              </div>
+              <ng-template #autre>
+
+                <td><a  class="btn btn-danger " role="button" (click)="valider(item.key,Rayon,Numero,true)"> Non Validé</a></td>
+              </ng-template>
+          
+        </tr>
+                   
+                    <tbody>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+        
+          </div>
+          <!-- /.container-fluid -->
+        
+          <!-- Sticky Footer -->
+          <footer class="sticky-footer">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <span>Copyright © Your Website 2019</span>
+              </div>
+            </div>
+          </footer>
+        
+        </div>
+        
+      </div>
+      <!-- /#wrapper -->
+    
+      <!-- Scroll to Top Button-->
+      
+      <!-- Logout Modal-->
+      
+      
+    
+    </body>
+    
+  

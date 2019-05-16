@@ -1,0 +1,100 @@
+
+
+<body id="page-top">
+  <app-header></app-header>
+   
+  
+    <div id="wrapper">
+  
+      <!-- Sidebar -->
+      <app-side-bar></app-side-bar>
+  
+      
+      <!-- /.content-wrapper -->
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="well well-sm">
+                
+                <fieldset>
+                  <legend class="text-center">Modifier Parking</legend>
+          
+                  <!-- Name input-->
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="Nom">Nom Parking</label>
+                    <div class="col-md-9">
+                      <input id="NomP" name="NomP" type="text" placeholder="{{(parking | async )?.nom}}" class="form-control" [(ngModel)]="NomP">
+                    </div>
+                  </div>
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="Prénom">Lieu</label>
+            <div class="col-md-9">
+              <input id="Lieu" name="Lieu" type="text" placeholder="{{(parking | async )?.Lieu}}" class="form-control" [(ngModel)]="Lieu">
+            </div>
+          </div>
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="Telephone">Distance</label>
+            <div class="col-md-9">
+              <input id="Distance" name="Distance" type="text" placeholder="{{(parking | async )?.Distance}}" class="form-control" [(ngModel)]="Distance">
+            </div>
+          </div>
+           <!-- Name input-->
+           
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="Code Postale">Nombre place totale</label>
+            <div class="col-md-9">
+              <input id="nbrPlace" name="nbrPlace" type="text" placeholder="{{(parking | async )?.nbrPlace}}..." class="form-control" [(ngModel)]="nbrPlace">
+            </div>
+          </div>
+           <!-- Name input-->
+           
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="name">Nombre place disponible</label>
+            <div class="col-md-9">
+              <input id="placeDispo" name="placeDispo" type="text" placeholder="{{(parking | async )?.placeDispo}}" class="form-control" [(ngModel)]="placeDispo">
+            </div>
+          </div>
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="Pays">Prix par jours</label>
+            <div class="col-md-9">
+              <input id="prixJr" name="prixJr" type="text" placeholder="{{(parking | async )?.prixJr}}" class="form-control" [(ngModel)]="prixJr">
+            </div>
+          </div>
+
+                 
+          
+                  <!-- Message body -->
+                  
+          
+                  <!-- Form actions -->
+                  <div class="form-group">
+                    <div class="col-md-12 text-right">
+                      <button type="submit" class="btn btn-primary btn-lg" (click)="updateParking(keyy,NomP,Lieu,Distance,nbrPlace,placeDispo,prixJr)">Submit</button>
+                    </div>
+                  </div>
+                </fieldset>
+               
+              </div>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- /#wrapper -->
+  
+    <!-- Scroll to Top Button-->
+    
+    <!-- Logout Modal-->
+    
+    
+  
+  </body>
+  
+  
+  
+

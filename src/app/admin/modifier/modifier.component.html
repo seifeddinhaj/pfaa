@@ -1,0 +1,104 @@
+
+
+<body id="page-top">
+  <app-header></app-header>
+   
+  
+    <div id="wrapper">
+  
+      <!-- Sidebar -->
+      <app-side-bar></app-side-bar>
+  
+      
+      <!-- /.content-wrapper -->
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="well well-sm">
+                
+                <fieldset>
+                  <legend class="text-center">Modifier Profile</legend>
+          
+                  <!-- Name input-->
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="Nom">Nom</label>
+                    <div class="col-md-9">
+                      <input id="Nom" name="Nom" type="text" placeholder="{{(user | async )?.nom}}" class="form-control" [(ngModel)]="Nom">
+                    </div>
+                  </div>
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="Prénom">Prénom</label>
+            <div class="col-md-9">
+              <input id="Prénom" name="Prénom" type="text" placeholder="{{(user | async )?.prenom}}" class="form-control" [(ngModel)]="Prenom">
+            </div>
+          </div>
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="Telephone">Telephone</label>
+            <div class="col-md-9">
+              <input id="Telephone" name="Telephone" type="text" placeholder="{{(user | async )?.numberPhone}}" class="form-control" [(ngModel)]="Telephone">
+            </div>
+          </div>
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="name">Adresse</label>
+            <div class="col-md-9">
+              <input id="Adresse" name="Adresse" type="text" placeholder="{{(user | async )?.adresse}}" class="form-control" [(ngModel)]="Adresse">
+            </div>
+          </div>
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="Code Postale">Code Postale</label>
+            <div class="col-md-9">
+              <input id="Code Postale" name="Code Postale" type="text" placeholder="{{(user | async )?.codePostal}}..." class="form-control" [(ngModel)]="CodePostale">
+            </div>
+          </div>
+           <!-- Name input-->
+           
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="name">Ville</label>
+            <div class="col-md-9">
+              <input id="Ville" name="Ville" type="text" placeholder="{{(user | async )?.ville}}" class="form-control" [(ngModel)]="Ville">
+            </div>
+          </div>
+           <!-- Name input-->
+           <div class="form-group">
+            <label class="col-md-3 control-label" for="Pays">Pays</label>
+            <div class="col-md-9">
+              <input id="Pays" name="Pays" type="text" placeholder="{{(user | async )?.pays}}" class="form-control" [(ngModel)]="Pays">
+            </div>
+          </div>
+
+                 
+          
+                  <!-- Message body -->
+                  
+          
+                  <!-- Form actions -->
+                  <div class="form-group">
+                    <div class="col-md-12 text-right">
+                      <button type="submit" class="btn btn-primary btn-lg" (click)="updateProfile(keyy,Nom,Prenom,Adresse,CodePostale,Ville,Pays,Telephone)">Submit</button>
+                    </div>
+                  </div>
+                </fieldset>
+               
+              </div>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- /#wrapper -->
+  
+    <!-- Scroll to Top Button-->
+    
+    <!-- Logout Modal-->
+    
+    
+  
+  </body>
+  
+  
+  
